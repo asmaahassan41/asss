@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مس أسماء أنور | منصة تعلّم الرياضيات - المنهج المصري لجميع المراحل التعليمية</title>
+  <meta name="description" content="الموقع الرسمي لمس أسماء أنور خبيرة تدريس الرياضيات للمرحلة الابتدائية، الإعدادية، والثانوية العامة وفق أحدث المناهج المصرية المطورة وبنك المعرفة." />
+  <meta name="keywords" content="مس أسماء أنور, رياضيات, ماث, منهج مصري, الثانوية العامة, الشهادة الإعدادية, الصف الرابع الابتدائي, مذكرات رياضيات" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/logo.webp" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#067276',
+              'teal-dark': '#044e51',
+              'teal-light': '#0d9488',
+              'teal-soft': '#f0fdfa',
+              red: '#d92534',
+              'red-dark': '#b91c1c',
+              'red-light': '#ef4444',
+              'red-soft': '#fef2f2',
+              gold: '#f59e0b',
+              'gold-dark': '#d97706',
+              'gold-light': '#fbbf24'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS matching identity -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased bg-math-grid relative">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-brand-teal-dark via-brand-teal to-brand-teal-dark text-white text-xs py-2 px-4 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="bg-brand-red text-white font-bold px-2 py-0.5 rounded-full text-[11px] animate-pulse">
+          مفتوح الآن
+        </span>
+        <span class="font-medium">باب الحجز والتسجيل للعام الدراسي الجديد والترم الحالي متاح لجميع المراحل التعليمية</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:01000000000" class="hover:text-amber-300 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[10px]"></i>
+          <span>اتصال مباشر</span>
+        </a>
+        <a href="#booking-section" class="hover:text-amber-300 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-check text-[10px]"></i>
+          <span>حجز مقعد أونلاين / سنتر</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <header class="sticky top-0 z-50 glass-nav shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Brand Identity -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="relative">
+            <img src="assets/logo.webp" alt="لوجو مس أسماء أنور - تعلّم الرياضيات" class="w-14 h-14 rounded-full object-cover logo-ring bg-white" />
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-bold text-brand-teal uppercase tracking-wider">منصة</span>
+              <span class="text-xs font-black text-amber-500">تعلّم الرياضيات</span>
+            </div>
+            <h1 class="text-xl sm:text-2xl font-black text-slate-900 group-hover:text-brand-teal transition tracking-tight">
+              مس أسماء أنور
+            </h1>
+            <span class="text-[11px] text-slate-500 font-semibold -mt-1">جميع المراحل التعليمية • منهج مصري مطور</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-bold text-slate-700">
+          <a href="#hero-section" class="hover:text-brand-teal transition flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-house text-brand-teal text-xs"></i>
+            <span>الرئيسية</span>
+          </a>
+          <a href="#about-section" class="hover:text-brand-teal transition flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-chalkboard-user text-brand-teal text-xs"></i>
+            <span>عن المعلمة</span>
+          </a>
+          <a href="#curriculum-section" class="hover:text-brand-teal transition flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-graduation-cap text-brand-teal text-xs"></i>
+            <span>المراحل والصفوف</span>
+          </a>
+          <a href="#quiz-section" class="hover:text-brand-teal transition flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-brain text-brand-red text-xs"></i>
+            <span>اختبر مستواك</span>
+          </a>
+          <a href="#resources-section" class="hover:text-brand-teal transition flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-book-open text-brand-gold text-xs"></i>
+            <span>مذكرات مجانية</span>
+          </a>
+          <a href="#honor-section" class="hover:text-brand-teal transition flex items-center gap-1.5 py-1">
+            <i class="fa-solid fa-award text-amber-500 text-xs"></i>
+            <span>لوحة الشرف</span>
+          </a>
+        </nav>
+
+        <!-- Action CTA Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="#booking-section" class="btn-glow-teal px-5 py-2.5 bg-brand-red hover:bg-brand-red-dark text-white rounded-xl font-black text-sm flex items-center gap-2 shadow-md hover:shadow-lg transition">
+            <i class="fa-solid fa-file-signature"></i>
+            <span>سجل الآن</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 hover:text-brand-teal hover:bg-slate-100 transition focus:outline-none">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-3">
+      <a href="#hero-section" class="block px-3 py-2 rounded-md text-base font-bold text-slate-700 hover:bg-teal-50 hover:text-brand-teal">الرئيسية</a>
+      <a href="#about-section" class="block px-3 py-2 rounded-md text-base font-bold text-slate-700 hover:bg-teal-50 hover:text-brand-teal">عن مس أسماء أنور</a>
+      <a href="#curriculum-section" class="block px-3 py-2 rounded-md text-base font-bold text-slate-700 hover:bg-teal-50 hover:text-brand-teal">المراحل والصفوف الدراسية</a>
+      <a href="#quiz-section" class="block px-3 py-2 rounded-md text-base font-bold text-slate-700 hover:bg-teal-50 hover:text-brand-teal">اختبر مستواك التفاعلي</a>
+      <a href="#resources-section" class="block px-3 py-2 rounded-md text-base font-bold text-slate-700 hover:bg-teal-50 hover:text-brand-teal">المذكرات والمراجعات المجانية</a>
+      <a href="#honor-section" class="block px-3 py-2 rounded-md text-base font-bold text-slate-700 hover:bg-teal-50 hover:text-brand-teal">لوحة الشرف وأوائل الدرجات</a>
+      <a href="#booking-section" class="block w-full text-center px-4 py-3 rounded-xl bg-brand-red text-white font-bold text-sm shadow">
+        حجز درس جديد (أونلاين / سنتر)
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero-section" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-teal-50/50 via-white to-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Right Column: Text & Content -->
+        <div class="lg:col-span-7 text-center lg:text-right">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-teal/10 border border-brand-teal/20 text-brand-teal text-xs font-black mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+            <span>المنهج المصري المطور لجميع الصفوف الدراسية 2026/2027</span>
+          </div>
+
+          <!-- Main Catchy Heading -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.25] mb-5 tracking-tight">
+            تعلّم <span class="title-math-3d inline-block">الرياضيات</span><br />
+            <span class="text-gradient-teal">بالفهم والإبداع.. مش بالحفظ!</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+            أهلاً بكم في المنصة التعليمية لـ <span class="font-bold text-brand-teal">مس أسماء أنور</span>. 
+            شرح مبسط، تأسيس عباقرة، وتدريب احترافي على مسائل التفكير العليا وامتحانات المحافظات 
+            للمرحلة <strong class="text-slate-800">الابتدائية</strong>، <strong class="text-slate-800">الإعدادية</strong>، و<strong class="text-slate-800">الثانوية العامة</strong>.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+            <a href="#booking-section" class="w-full sm:w-auto px-8 py-4 bg-brand-red hover:bg-brand-red-dark text-white rounded-2xl font-black text-base shadow-lg shadow-brand-red/25 hover:shadow-xl transition flex items-center justify-center gap-2.5">
+              <i class="fa-solid fa-graduation-cap text-lg"></i>
+              <span>احجز مقعدك للترم الجديد</span>
+            </a>
+            
+            <a href="#curriculum-section" class="w-full sm:w-auto px-7 py-4 bg-white hover:bg-slate-100 text-brand-teal border-2 border-brand-teal rounded-2xl font-black text-base shadow-sm transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-list-check"></i>
+              <span>استكشف المراحل الدراسية</span>
+            </a>
+
+            <a href="#quiz-section" class="w-full sm:w-auto px-6 py-4 bg-amber-500 hover:bg-amber-600 text-white rounded-2xl font-black text-base shadow-md transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-brain"></i>
+              <span>اختبر مستواك الآن</span>
+            </a>
+          </div>
+
+          <!-- Trust Elements & Key Highlights -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-slate-200">
+            <div class="bg-white/80 p-3.5 rounded-xl border border-slate-200/80 text-center shadow-xs">
+              <div class="text-2xl font-black text-brand-teal mb-0.5">+12 سنة</div>
+              <div class="text-xs text-slate-500 font-bold">خبرة بالمنهج المصري</div>
+            </div>
+            <div class="bg-white/80 p-3.5 rounded-xl border border-slate-200/80 text-center shadow-xs">
+              <div class="text-2xl font-black text-brand-red mb-0.5">+5,000</div>
+              <div class="text-xs text-slate-500 font-bold">طالب وطالبة متفوقين</div>
+            </div>
+            <div class="bg-white/80 p-3.5 rounded-xl border border-slate-200/80 text-center shadow-xs">
+              <div class="text-2xl font-black text-amber-500 mb-0.5">100%</div>
+              <div class="text-xs text-slate-500 font-bold">متابعة شخصية مستمرة</div>
+            </div>
+            <div class="bg-white/80 p-3.5 rounded-xl border border-slate-200/80 text-center shadow-xs">
+              <div class="text-2xl font-black text-emerald-600 mb-0.5">24/7</div>
+              <div class="text-xs text-slate-500 font-bold">إجابة الأسئلة والاستفسارات</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Left Column: Visual Hero Card matching the Logo Identity -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Glow background circle -->
+            <div class="absolute -inset-4 bg-gradient-to-r from-brand-teal/20 via-brand-red/15 to-amber-500/20 rounded-full blur-2xl opacity-75"></div>
+
+            <!-- Main Showcase Card -->
+            <div class="relative bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-white">
+              
+              <!-- Centered Official Logo -->
+              <div class="flex justify-center mb-6">
+                <div class="relative p-2 bg-gradient-to-br from-teal-50 to-white rounded-full">
+                  <img src="assets/logo.webp" alt="شعار منصة تعلّم الرياضيات - مس أسماء أنور" class="w-44 h-44 sm:w-52 sm:h-52 object-contain rounded-full shadow-lg" />
+                </div>
+              </div>
+
+              <!-- Content Inside Card -->
+              <div class="text-center">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 text-brand-teal text-xs font-black border border-teal-200 mb-3">
+                  <i class="fa-solid fa-certificate text-amber-500"></i>
+                  <span>شعار التفوق والإتقان</span>
+                </div>
+                <h3 class="text-xl font-black text-slate-900 mb-2">منهج متكامل يضمن الدرجة النهائية</h3>
+                <p class="text-xs text-slate-500 mb-5 leading-relaxed">
+                  نجمع بين قوة الشرح المبسط والتطبيقات التفاعلية للمفاهيم الرياضية (جبر، هندسة، حساب مثلثات، تفاضل، وتطبيقات الميكانيكا).
+                </p>
+
+                <!-- Tools from Logo Showcase -->
+                <div class="grid grid-cols-4 gap-2 pt-4 border-t border-slate-100">
+                  <div class="flex flex-col items-center p-2 rounded-xl bg-teal-50/70 text-brand-teal">
+                    <i class="fa-solid fa-compass-drafting text-lg mb-1"></i>
+                    <span class="text-[10px] font-bold">هندسة وبرهان</span>
+                  </div>
+                  <div class="flex flex-col items-center p-2 rounded-xl bg-rose-50/70 text-brand-red">
+                    <i class="fa-solid fa-calculator text-lg mb-1"></i>
+                    <span class="text-[10px] font-bold">حلول ذكية</span>
+                  </div>
+                  <div class="flex flex-col items-center p-2 rounded-xl bg-amber-50/70 text-amber-600">
+                    <i class="fa-solid fa-chart-line text-lg mb-1"></i>
+                    <span class="text-[10px] font-bold">أفكار امتحانات</span>
+                  </div>
+                  <div class="flex flex-col items-center p-2 rounded-xl bg-blue-50/70 text-blue-600">
+                    <i class="fa-solid fa-file-pdf text-lg mb-1"></i>
+                    <span class="text-[10px] font-bold">ملازم شاملة</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Teacher Section -->
+  <section id="about-section" class="py-16 md:py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-teal text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+          <i class="fa-solid fa-chalkboard-user ml-1"></i> المعلمة وخبرة السنين
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4">
+          من هي <span class="text-brand-teal">مس أسماء أنور</span>؟
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          معلمة متخصصة ومؤهلة أكاديمياً، كرّست سنوات طويلة لتبسيط مادة الرياضيات وتحويلها من مادة صعبة ومعقدة إلى مادة ممتعة وعلامة مضمونة في شهادات الطلاب.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Features List -->
+        <div class="lg:col-span-6 space-y-5">
+          
+          <div class="p-5 rounded-2xl bg-teal-50/50 border border-teal-100 flex items-start gap-4 hover:bg-teal-50 transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-teal text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md shadow-brand-teal/20">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">مؤهل أكاديمي متخصص مع مرتبة الشرف</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                حاصلة على بكالوريوس في تدريس الرياضيات بتقدير امتياز مع دراسات عليا في استراتيجيات تدريس التفكير الرياضي ونواتج التعلم الحديثة.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-rose-50/50 border border-rose-100 flex items-start gap-4 hover:bg-rose-50 transition">
+            <div class="w-12 h-12 rounded-xl bg-brand-red text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md shadow-brand-red/20">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">فلسفة "الفهم يسبق الحل"</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                لا نعتمد أبداً على حفظ القوانين الجافة، بل نوضّح للطالب أصل كل نظرية، وكيف يستنتج الحل بنفسه بأكثر من طريقة واستراتيجية ذكية.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-amber-50/50 border border-amber-100 flex items-start gap-4 hover:bg-amber-50 transition">
+            <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md shadow-amber-500/20">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">مؤلفة سلسلة مذكرات "القمة في الرياضيات"</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                مذكرات منسقة بألوان مريحة للعين، تجمع شروحات مبسطة، خرائط ذهنية للقوانين، وتمارين متدرجة من المستوى المباشر حتى قمم بنك المعرفة.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-blue-50/50 border border-blue-100 flex items-start gap-4 hover:bg-blue-50 transition">
+            <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-md shadow-blue-600/20">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base mb-1">شراكة ومتابعة مستمرة مع ولي الأمر</h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                تقارير دورية عن مستوى الطالب، متابعة الواجبات وحضور الحصص، وجروبات دعم واتساب للإجابة الفورية عن أي مسألة تقف أمام الطالب.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Educational Methods Card -->
+        <div class="lg:col-span-6 bg-gradient-to-br from-slate-900 to-brand-teal-dark text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+          
+          <div class="relative z-10">
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+                منظومة التعليم المتطورة
+              </span>
+              <span class="text-xs text-teal-200">المنهج المصري</span>
+            </div>
+
+            <h3 class="text-2xl font-black mb-4">كيف تضمن مع مس أسماء الدرجة النهائية؟</h3>
+            
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                <span class="text-sm">شرح تفاعلي مباشر (أونلاين بأحدث الشاشات أو سنتر حضوري).</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                <span class="text-sm">حل نماذج الوزارة الاسترشادية وامتحانات المحافظات الـ 27.</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                <span class="text-sm">اختبارات إلكترونية بعد كل درس مع تصحيح فوري ومعرفة الأخطاء.</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                <span class="text-sm">معسكرات مراجعة ليلة الامتحان لتقفيل المادة بكل ثقة.</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-between">
+              <div>
+                <div class="text-xs text-teal-200">معدل تقفيل درجات الطلاب</div>
+                <div class="text-xl font-black text-amber-300">98.4% الدرجات النهائية</div>
+              </div>
+              <a href="#booking-section" class="px-5 py-2.5 bg-brand-red hover:bg-brand-red-dark text-white rounded-xl font-bold text-xs transition">
+                انضم الآن
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Curriculum & Educational Stages Showcase -->
+  <section id="curriculum-section" class="py-16 md:py-24 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="badge-teal text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+          <i class="fa-solid fa-cubes-stacked ml-1"></i> التغطية الشاملة
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4">
+          المراحل والصفوف الدراسية (المنهج المصري)
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          برامج دراسية مصممة بدقة لتناسب طبيعة كل مرحلة عمرية، من تأسيس الأطفال في الابتدائي وحتى ماراثون الثانوية العامة والوصول لكلية الهندسة.
+        </p>
+
+        <!-- Stage Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-2 mt-8">
+          <button class="filter-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-brand-teal text-white shadow-md" data-stage="all">
+            <i class="fa-solid fa-layer-group ml-1"></i> جميع المراحل
+          </button>
+          <button class="filter-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-stage="primary">
+            <i class="fa-solid fa-shapes ml-1 text-amber-500"></i> المرحلة الابتدائية (4، 5، 6)
+          </button>
+          <button class="filter-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-stage="prep">
+            <i class="fa-solid fa-compass-drafting ml-1 text-brand-teal"></i> المرحلة الإعدادية (1، 2، 3)
+          </button>
+          <button class="filter-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-stage="secondary">
+            <i class="fa-solid fa-infinity ml-1 text-brand-red"></i> المرحلة الثانوية (1، 2، 3)
+          </button>
+        </div>
+      </div>
+
+      <!-- Curriculum Cards Container (Dynamically populated from data/curriculum.js) -->
+      <div id="curriculum-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Quiz Section -->
+  <section id="quiz-section" class="py-16 md:py-24 bg-white relative overflow-hidden">
+    <div id="confetti-container" class="absolute inset-0 pointer-events-none z-30"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center mb-12">
+        <span class="badge-red text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+          <i class="fa-solid fa-bolt ml-1"></i> أداة تفاعلية حصرية
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-3">
+          اختبر مستواك في <span class="text-brand-red">الرياضيات</span> أونلاين مجاناً!
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          أجب عن 5 أسئلة ذكية في مرحلتك الدراسية واكتشف فوراً نقاط قوتك ونصيحة مس أسماء لتطوير مستواك.
+        </p>
+      </div>
+
+      <!-- Quiz Card Box -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-brand-teal/20 shadow-xl bg-white">
+        
+        <!-- Stage selector inside quiz -->
+        <div class="mb-8 flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100">
+          <span class="text-xs font-bold text-slate-500">اختر المرحلة التي تريد اختبارها:</span>
+          <div class="flex items-center gap-2">
+            <button class="quiz-stage-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-quiz-stage="primary">
+              الابتدائية
+            </button>
+            <button class="quiz-stage-btn px-4 py-2 rounded-xl text-xs font-bold bg-brand-teal text-white shadow-sm" data-quiz-stage="prep">
+              الإعدادية
+            </button>
+            <button class="quiz-stage-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition" data-quiz-stage="secondary">
+              الثانوية العامة
+            </button>
+          </div>
+        </div>
+
+        <!-- Quiz Intro View -->
+        <div id="quiz-intro" class="text-center py-6">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-3xl shadow-inner">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <h3 class="text-xl font-black text-slate-800 mb-2">هل أنت مستعد للتحدي؟</h3>
+          <p class="text-xs sm:text-sm text-slate-500 max-w-md mx-auto mb-6">
+            الاختبار يحتوي على أسئلة قياس فهم ونواتج تعلم، وتظهر النتيجة مع الإجابة النموذجية فوراً.
+          </p>
+          <button id="start-quiz-btn" class="px-8 py-3.5 bg-brand-teal hover:bg-brand-teal-dark text-white rounded-xl font-black text-sm shadow-md hover:shadow-lg transition">
+            <i class="fa-solid fa-play ml-1"></i> ابدأ الاختبار الآن
+          </button>
+        </div>
+
+        <!-- Quiz Active Question View -->
+        <div id="quiz-active-area" class="hidden">
+          
+          <div class="flex items-center justify-between text-xs font-bold text-slate-500 mb-2">
+            <span id="quiz-counter">السؤال 1 من 5</span>
+            <span class="text-brand-teal"><i class="fa-solid fa-calculator ml-1"></i> منصة مس أسماء أنور</span>
+          </div>
+          
+          <!-- Progress bar -->
+          <div class="w-full h-2 bg-slate-100 rounded-full mb-6 overflow-hidden">
+            <div id="quiz-progress-bar" class="h-full bg-brand-teal transition-all duration-300" style="width: 20%;"></div>
+          </div>
+
+          <!-- Question Content -->
+          <h3 id="quiz-question-text" class="text-lg sm:text-xl font-bold text-slate-900 mb-6 leading-relaxed">
+            <!-- Question text -->
+          </h3>
+
+          <!-- Options Container -->
+          <div id="quiz-options-container" class="space-y-3 mb-6">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Explanation box (appears after answer) -->
+          <div id="quiz-explanation" class="hidden p-4 rounded-xl bg-teal-50 border border-teal-200 text-xs sm:text-sm text-teal-900 mb-6">
+            <div class="font-bold flex items-center gap-1.5 mb-1 text-brand-teal">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>توضيح مس أسماء للحل النموذجي:</span>
+            </div>
+            <p id="quiz-explanation-text" class="leading-relaxed"></p>
+          </div>
+
+          <!-- Next Button -->
+          <div class="text-left">
+            <button id="next-question-btn" onclick="nextQuestion()" class="hidden px-6 py-3 bg-brand-teal hover:bg-brand-teal-dark text-white rounded-xl font-bold text-xs sm:text-sm transition">
+              <span>السؤال التالي</span>
+              <i class="fa-solid fa-arrow-left mr-1"></i>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Quiz Result View -->
+        <div id="quiz-result" class="hidden text-center py-6">
+          <div class="w-24 h-24 mx-auto mb-4 rounded-3xl bg-amber-50 border border-amber-200 text-amber-500 flex items-center justify-center text-4xl shadow-md">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          
+          <h3 id="result-title" class="text-2xl font-black mb-2 text-slate-900">
+            أحسنت! نتيجتك جاهزة
+          </h3>
+
+          <div class="flex items-center justify-center gap-4 my-4">
+            <div class="bg-teal-50 border border-teal-200 px-6 py-3 rounded-2xl">
+              <div class="text-xs text-brand-teal font-bold mb-1">الدرجة المحققة</div>
+              <div id="result-score" class="text-2xl font-black text-brand-teal-dark">5 / 5</div>
+            </div>
+            <div class="bg-rose-50 border border-rose-200 px-6 py-3 rounded-2xl">
+              <div class="text-xs text-brand-red font-bold mb-1">النسبة المئوية</div>
+              <div id="result-percentage" class="text-2xl font-black text-brand-red">100%</div>
+            </div>
+          </div>
+
+          <p id="result-advice" class="text-sm text-slate-600 max-w-md mx-auto mb-6 leading-relaxed">
+            <!-- Custom Advice based on score -->
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button onclick="startQuiz()" class="w-full sm:w-auto px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition">
+              <i class="fa-solid fa-rotate-right ml-1"></i> إعادة الاختبار
+            </button>
+            <a href="#booking-section" class="w-full sm:w-auto px-6 py-3 bg-brand-red hover:bg-brand-red-dark text-white rounded-xl font-bold text-xs transition shadow-md">
+              <i class="fa-brands fa-whatsapp ml-1"></i> احجز درسك مع مس أسماء لتطوير مستواك
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Downloadable Free Resources & Notes -->
+  <section id="resources-section" class="py-16 md:py-24 bg-slate-50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="badge-gold text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+          <i class="fa-solid fa-file-pdf ml-1"></i> هدية مجانية لكل الطلاب
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4">
+          مكتبة المذكرات والمراجعات المجانية
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          حمل الآن أقوى ملخصات قوانين الجبر والهندسة، وتوقعات ليلة الامتحان المعدة من قبل مس أسماء أنور بصيغة PDF عالية الدقة وجاهزة للطباعة فوراً.
+        </p>
+      </div>
+
+      <!-- Resources Grid (Rendered by JS) -->
+      <div id="resources-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Honor Roll & Testimonials Section -->
+  <section id="honor-section" class="py-16 md:py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Honor Roll -->
+      <div class="mb-20">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="badge-gold text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+            <i class="fa-solid fa-award ml-1"></i> فخر مس أسماء أنور
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-3">
+            لوحة شرف الأوائل والدرجات النهائية
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm">
+            نماذج من أبطالنا الذين حققوا أعلى الدرجات والمركز الأول بفضل الله ثم المتابعة الجادة.
+          </p>
+        </div>
+
+        <div id="honor-roll-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div>
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="badge-teal text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+            <i class="fa-solid fa-comments ml-1"></i> تجارب حقيقية
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mb-2">
+            ماذا يقول أولياء الأمور والطلاب؟
+          </h3>
+          <p class="text-slate-500 text-xs sm:text-sm">
+            ثقة غالية نعتز بها ومسؤولية مستمرة لتقديم الأفضل دائماً.
+          </p>
+        </div>
+
+        <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Smart WhatsApp Booking & Registration Section -->
+  <section id="booking-section" class="py-16 md:py-24 bg-gradient-to-b from-teal-900 via-brand-teal-dark to-slate-900 text-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center mb-12">
+        <span class="bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+          <i class="fa-solid fa-user-plus ml-1"></i> انضم لعائلة العباقرة
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black mb-3">
+          استمارة الحجز والتسجيل للعام الدراسي
+        </h2>
+        <p class="text-teal-200 text-sm sm:text-base max-w-xl mx-auto">
+          سجل بياناتك الآن وسيقوم فريق مس أسماء بالتواصل معك فوراً لتحديد الموعد المناسب والمجموعة الأنسب لمستواك.
+        </p>
+      </div>
+
+      <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl border border-teal-700/30">
+        
+        <form id="booking-form" class="space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">اسم الطالب / الطالبة رباعي *</label>
+              <input type="text" id="student-name" required placeholder="مثال: عمر أحمد الشريف" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">رقم هاتف الطالب (واتساب) *</label>
+              <input type="tel" id="student-phone" required placeholder="01xxxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">رقم هاتف ولي الأمر (للمتابعة الدورية)</label>
+              <input type="tel" id="parent-phone" placeholder="01xxxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">المرحلة والصف الدراسي *</label>
+              <select id="form-grade" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50">
+                <option value="">-- اختر الصف الدراسي --</option>
+                <optgroup label="المرحلة الابتدائية">
+                  <option value="الصف الرابع الابتدائي">الصف الرابع الابتدائي (المنهج المطور)</option>
+                  <option value="الصف الخامس الابتدائي">الصف الخامس الابتدائي</option>
+                  <option value="الصف السادس الابتدائي">الصف السادس الابتدائي</option>
+                </optgroup>
+                <optgroup label="المرحلة الإعدادية">
+                  <option value="الصف الأول الإعدادي">الصف الأول الإعدادي</option>
+                  <option value="الصف الثاني الإعدادي">الصف الثاني الإعدادي</option>
+                  <option value="الصف الثالث الإعدادي (الشهادة الإعدادية)">الصف الثالث الإعدادي (الشهادة الإعدادية)</option>
+                </optgroup>
+                <optgroup label="المرحلة الثانوية">
+                  <option value="الصف الأول الثانوي">الصف الأول الثانوي (نظام التابلت)</option>
+                  <option value="الصف الثاني الثانوي">الصف الثاني الثانوي (علمي / أدبي)</option>
+                  <option value="الصف الثالث الثانوي (الثانوية العامة - علمي رياضة)">الصف الثالث الثانوي (الثانوية العامة - علمي رياضة)</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">لغة الدراسة</label>
+              <select id="form-curriculum" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50">
+                <option value="عربي (مدارس عامة وخاصة عربي)">عربي (مدارس عامة وخاصة)</option>
+                <option value="لغات تجريبي وخاص (Math)">لغات تجريبي وخاص (Math)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">نظام الحضور المفضل</label>
+              <select id="form-attendance" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50">
+                <option value="أونلاين تفاعلي (Zoom / المنصة)">أونلاين تفاعلي (Zoom / المنصة)</option>
+                <option value="سنتر ومجموعات حضورية">سنتر ومجموعات حضورية</option>
+                <option value="دروس خاصة فردية (VIP)">دروس خاصة فردية (VIP)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">المحافظة / المدينة</label>
+              <input type="text" id="form-governorate" placeholder="مثال: القاهرة / الجيزة / الإسكندرية" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-2">ملاحظات أو أسئلة إضافية للمعلمة</label>
+            <textarea id="form-notes" rows="3" placeholder="اكتب أي نقطة تريد التركيز عليها أو استفسار عن مواعيد المجموعات..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-brand-teal text-sm bg-slate-50"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 bg-brand-red hover:bg-brand-red-dark text-white rounded-2xl font-black text-base shadow-lg shadow-brand-red/30 transition flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>تأكيد الحجز والإرسال عبر واتساب فوراً</span>
+          </button>
+
+          <p class="text-center text-xs text-slate-500">
+            * سيتم توجيهك مباشرة إلى محادثة واتساب مع مس أسماء أنور لإتمام التسجيل وتأكيد المواعيد.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Download Modal Preview -->
+  <div id="download-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative text-center">
+      <button onclick="closeDownloadModal()" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-teal-50 text-brand-teal flex items-center justify-center text-3xl">
+        <i class="fa-solid fa-file-pdf text-brand-red"></i>
+      </div>
+
+      <h3 id="modal-res-title" class="text-xl font-black text-slate-900 mb-2">عنوان المذكرة</h3>
+      <p id="modal-res-desc" class="text-xs text-slate-600 mb-6 leading-relaxed">
+        تفاصيل المذكرة وروابط التنزيل.
+      </p>
+
+      <div class="space-y-3">
+        <button onclick="alert('جاري بدء تحميل المذكرة الآن بصيغة PDF.. نتمنى لكم دوام التفوق!'); closeDownloadModal();" class="w-full py-3 bg-brand-teal hover:bg-brand-teal-dark text-white rounded-xl font-bold text-sm transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-download"></i>
+          <span>تحميل المذكرة الآن (سيرفر مباشر)</span>
+        </button>
+        <button onclick="openWhatsAppWithMessage('مرحباً مس أسماء، أود الحصول على نسخة من المذكرة والمتابعة مع حضرتك'); closeDownloadModal();" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>طلب المذكرة ومتابعة الإجابات عبر واتساب</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Direct WhatsApp Button -->
+  <a id="floating-whatsapp" href="#" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition duration-300">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-14 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.webp" alt="لوجو مس أسماء أنور" class="w-12 h-12 rounded-full object-cover bg-white p-0.5" />
+            <div>
+              <div class="text-white font-black text-base">مس أسماء أنور</div>
+              <div class="text-[11px] text-teal-400 font-semibold">تعلّم الرياضيات - منهج مصري</div>
+            </div>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            منصة تعليمية متخصصة لتدريس مادة الرياضيات لجميع المراحل التعليمية (الابتدائي - الإعدادي - الثانوي) بأحدث الأساليب التفاعلية.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">روابط سريعة</h4>
+          <ul class="space-y-2">
+            <li><a href="#hero-section" class="hover:text-white transition">الرئيسية</a></li>
+            <li><a href="#about-section" class="hover:text-white transition">عن مس أسماء أنور</a></li>
+            <li><a href="#curriculum-section" class="hover:text-white transition">المراحل والصفوف الدراسية</a></li>
+            <li><a href="#quiz-section" class="hover:text-white transition">الاختبار التفاعلي الذكي</a></li>
+            <li><a href="#resources-section" class="hover:text-white transition">مكتبة المذكرات المجانية</a></li>
+          </ul>
+        </div>
+
+        <!-- Stages Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">المراحل التعليمية</h4>
+          <ul class="space-y-2">
+            <li><span class="text-slate-500">المرحلة الابتدائية (الرابع، الخامس، السادس)</span></li>
+            <li><span class="text-slate-500">المرحلة الإعدادية (الأول، الثاني، الشهادة الإعدادية)</span></li>
+            <li><span class="text-slate-500">المرحلة الثانوية (أولى، ثانية، الثانوية العامة)</span></li>
+            <li><span class="text-slate-500">مناهج اللغات التجريبي والخاص (Math)</span></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Social -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">تواصل ومتابعة</h4>
+          <div class="space-y-2.5 mb-4">
+            <div class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+              <span>واتساب: متاح للاستفسار والحجز</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-amber-400 text-sm"></i>
+              <span>مواعيد الرد: يومياً 9:00 ص - 10:00 م</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-3 text-lg pt-2">
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-red-600 text-slate-300 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-sky-500 text-slate-300 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500">
+        <div>جميع الحقوق محفوظة © 2026 - منصة تعلّم الرياضيات (مس أسماء أنور).</div>
+        <div class="mt-2 sm:mt-0">تصميم وتطوير بأعلى معايير الويب الحديثة</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/curriculum.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

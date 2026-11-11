@@ -1,0 +1,221 @@
+/* Custom Mathematical & Educational Design Stylesheet 
+   Visual Identity: "تعلّم الرياضيات - مس أسماء أنور"
+   Colors extracted from Logo: Deep Petrol Teal, Vibrant Crimson Red, Golden Amber
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap');
+
+:root {
+  /* Brand Identity Palette from Logo */
+  --brand-teal: #067276;
+  --brand-teal-dark: #044e51;
+  --brand-teal-light: #0d9488;
+  --brand-teal-soft: #f0fdfa;
+  
+  --brand-red: #d92534;
+  --brand-red-dark: #b91c1c;
+  --brand-red-light: #ef4444;
+  --brand-red-soft: #fef2f2;
+
+  --brand-gold: #f59e0b;
+  --brand-gold-dark: #d97706;
+  --brand-gold-light: #fbbf24;
+  --brand-gold-soft: #fffbeb;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --card-bg: #ffffff;
+  
+  --gradient-brand: linear-gradient(135deg, #067276 0%, #0d9488 50%, #044e51 100%);
+  --gradient-red: linear-gradient(135deg, #d92534 0%, #ef4444 100%);
+  --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  --gradient-hero: radial-gradient(circle at 85% 15%, rgba(6, 114, 118, 0.12) 0%, transparent 45%),
+                   radial-gradient(circle at 15% 85%, rgba(217, 37, 52, 0.08) 0%, transparent 45%),
+                   radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 50%),
+                   #ffffff;
+}
+
+* {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8fafc;
+  color: var(--text-main);
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar in Brand Colors */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-teal);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-teal-dark);
+}
+
+/* Mathematical floating symbols in teal & red */
+.math-bg-symbol {
+  position: absolute;
+  color: rgba(6, 114, 118, 0.09);
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatMath 9s ease-in-out infinite alternate;
+}
+
+@keyframes floatMath {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-22px) rotate(12deg);
+  }
+}
+
+/* Gradients text */
+.text-gradient-teal {
+  background: linear-gradient(135deg, #067276 0%, #0d9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-red {
+  background: var(--gradient-red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Title effect similar to logo "الرياضيات" */
+.title-math-3d {
+  color: #d92534;
+  text-shadow: 0 4px 12px rgba(217, 37, 52, 0.25), 0 1px 2px rgba(0,0,0,0.1);
+  font-weight: 900;
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 2px solid rgba(6, 114, 118, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(6, 114, 118, 0.12), 0 10px 10px -5px rgba(6, 114, 118, 0.04);
+  border-color: #5eead4;
+}
+
+/* Badges reflecting logo elements */
+.badge-teal {
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  color: #0f766e;
+}
+
+.badge-red {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.badge-gold {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #b45309;
+}
+
+/* Glow Buttons */
+.btn-glow-teal {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn-glow-teal::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #067276, #0d9488, #d92534, #f59e0b);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn-glow-teal:hover::after {
+  opacity: 0.65;
+  filter: blur(8px);
+}
+
+/* Logo pulse */
+.logo-ring {
+  box-shadow: 0 0 0 4px rgba(6, 114, 118, 0.15), 0 8px 24px -4px rgba(6, 114, 118, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo-ring:hover {
+  transform: scale(1.04) rotate(2deg);
+  box-shadow: 0 0 0 6px rgba(217, 37, 52, 0.2), 0 12px 30px -4px rgba(6, 114, 118, 0.35);
+}
+
+/* Interactive Quiz Styling */
+.quiz-option {
+  transition: all 0.2s ease;
+  border: 2px solid #e2e8f0;
+}
+
+.quiz-option:hover {
+  border-color: var(--brand-teal);
+  background-color: #f0fdfa;
+}
+
+.quiz-option.selected {
+  border-color: var(--brand-teal-dark);
+  background-color: #ccfbf1;
+}
+
+.quiz-option.correct {
+  border-color: #10b981 !important;
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+}
+
+.quiz-option.incorrect {
+  border-color: var(--brand-red) !important;
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+}
+
+/* Mathematics Grid Pattern */
+.bg-math-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 114, 118, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 114, 118, 0.04) 1px, transparent 1px);
+}
